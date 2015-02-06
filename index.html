@@ -6,7 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body style="height: 100%; width: 100%;">
-
+	
+	
+	<!-- CHOICE -->
 	<section id="choice-color">
 		<form method="post">
 			<h2>Choisir une couleur</h2>
@@ -18,8 +20,10 @@
 		</form>
 	</section>
 	
+	<!-- ARROWS -->
 	<div id="arrows"></div>
-
+	
+	<!-- CHARACTERS -->
 	<div id="characters">
 		<div id="myself" class="dirBas5" style="left:10px;top:10px;" 
 			data-zelda="true"
@@ -29,8 +33,14 @@
 			data-foot="5"></div>
 	</div>
 
+	<!-- HITBOX -->
+	<div class="hitbox" style="width: 120px;height: 120px; top: 50px; left: 100px; background: black; position: absolute;"></div>
+	
+	<!-- LAVE -->
 	<div id="lave" style="width: 200px;height: 200px; top: 100px; left: 400px;"></div>
 	
+
+	<!-- SCRIPTS -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="http://localhost:8080/socket.io/socket.io.js"></script>
 

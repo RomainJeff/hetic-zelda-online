@@ -169,7 +169,7 @@ Personnage.prototype.isHitboxed = function () {
         if (this.direction == "Haut") {
             if (
                 (this.posLeft - this.size < hitBoxRight && this.posLeft > hitBoxLeft) &&
-                (this.posTop + this.size > hitBoxBottom)
+                (this.posTop > hitBoxTop && this.posTop <= hitBoxBottom + this.size / 2)
             ) {
                 return true;
             }
