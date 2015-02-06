@@ -6,7 +6,8 @@ usersManager.prototype.add = function(id) {
     this.users[id] = {
         id: id,
         x: 10,
-        y: 10
+        y: 10,
+        color: 'green'
     };
 };
 
@@ -24,6 +25,10 @@ usersManager.prototype.set = function(id, x, y) {
         y: y,
         id: id
     };
+};
+
+usersManager.prototype.setColor = function (id, color) {
+    this.users[id].color = color;
 };
 
 usersManager.prototype.delete = function(id) {
@@ -54,13 +59,6 @@ io.on('connection', function (socket) {
         socket.emit('newUser', users.get(player));
     }
 
-    // On ajoute l'utilisateur
-    users.add(socket.id);
-
-    // On notifie les autres joueurs du
-    // nouvel utilisateur
-    socket.broadcast.emit('newUser', users.get(socket.id));
-
 
 
     /********************/
@@ -78,6 +76,20 @@ io.on('connection', function (socket) {
             event: event.name
         });
 
+    });
+
+
+    // Definie la couleur
+    socket.on('setColor', function (color) {
+        // On ajoute l'utilisateur
+        users.add(socket.id);
+
+        // On definie sa couleur
+        users.setColor(socket.id, color);
+
+        // On notifie les autres joueurs du
+        // nouvel utilisateur
+        socket.broadcast.emit('newUser', users.get(socket.id));
     });
 
 

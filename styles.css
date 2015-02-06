@@ -15,6 +15,49 @@ z-index: 3;
 
 }
 
+#choice-color {
+	z-index: 10;
+	color: white;
+	text-align: center;
+	padding-top: calc(25% - 50px);
+	box-sizing: border-box;
+	position: fixed;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	background: rgba(0,0,0,0.9);
+}
+
+#choice-color h2,
+#choice-color button {
+	text-transform: uppercase;
+	font-weight: 100;
+	font-family: "Raleway";
+	font-size: 20px;
+}
+
+#choice-color button {
+	background: transparent;
+	color: white;
+	font-size: 13px;
+	border: solid 1px rgba(255,255,255,0.5);
+	margin-top: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	cursor: pointer;
+}
+
+#choice-color button:hover {
+	background: white;
+	color: black;
+}
+
+#choice-color form {
+	height: 100px;
+	text-align: center;
+}
+
 #navigation{
 	position:fixed;
 	top:20px;
@@ -172,44 +215,44 @@ z-index: 3;
 
 /** RED **/
 [data-lava="true"].dirHaut4{
-	background-position: -352px -96px;
+	background-position: -352px -96px !important;
 }
 [data-lava="true"].dirHaut5{
-	background-position: -320px -96px;
+	background-position: -320px -96px !important;
 }
 [data-lava="true"].dirHaut6{
-	background-position: -288px -96px;
+	background-position: -288px -96px !important;
 }
 
 [data-lava="true"].dirDroite4{
-	background-position: -352px -64px;
+	background-position: -352px -64px !important;
 }
 [data-lava="true"].dirDroite5{
-	background-position: -320px -64px;
+	background-position: -320px -64px !important;
 }
 [data-lava="true"].dirDroite6{
-	background-position: -288px -64px;
+	background-position: -288px -64px !important;
 }
 
 
 [data-lava="true"].dirGauche4{
-	background-position: -352px -33px;
+	background-position: -352px -33px !important;
 }
 [data-lava="true"].dirGauche5{
-	background-position: -320px -33px;
+	background-position: -320px -33px !important;
 }
 [data-lava="true"].dirGauche6{
-	background-position: -288px -33px;
+	background-position: -288px -33px !important;
 }
 
 [data-lava="true"].dirBas4{
-	background-position: -352px 0px;
+	background-position: -352px 0px !important;
 }
 [data-lava="true"].dirBas5{
-	background-position: -320px 0px;
+	background-position: -320px 0px !important;
 }
 [data-lava="true"].dirBas6{
-	background-position: -288px 0px;
+	background-position: -288px 0px !important;
 }
 
 

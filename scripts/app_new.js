@@ -51,3 +51,14 @@ document.addEventListener('keydown', function (e) {
     });
 
 });
+
+
+
+$('#choice-color form').on('submit', function (event) {
+    event.preventDefault();
+    var color = $(this).children('select').val();
+
+    socket.emit('setColor', color);
+    $(this).parent().fadeOut();
+    $('#myself').attr('data-color', color);
+});
