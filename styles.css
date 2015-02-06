@@ -1,14 +1,15 @@
 body {
 	background: #000;
+	overflow: auto;
 }
 
 #playground {
-	background: url('http://i47.tinypic.com/1zmh0qq.png');
-	background-size: 60px;
+	background: url('images/map_dav.jpg') no-repeat;
+	background-size: cover;
 	overflow: hidden;
-	position: fixed;
-	left: calc(50% - 512px);
-	top: calc(50% - 300px);
+	position: relative;
+	left: calc(50% - 480px);
+	top: calc(50% - 480px);
 }
 
 [data-zelda=true] {
@@ -86,6 +87,23 @@ body {
 	background: url("https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10979477_10204532552368790_569285156_n.jpg?oh=9402ba2c1832b5df7bc6ff9d492e33d2&oe=54D72FFE&__gda__=1423386634_e55b6b64191153b2cadc622a23bff034");
 	background-size: 40px;
 	border-radius: 0 50% 50% 0;
+}
+
+.items {
+	background: url('images/items.png') no-repeat;
+	position: absolute;
+}
+
+.bareer {
+	background-position: -13px -498px; 
+	width: 54px;
+	height: 53px;
+}
+
+.stone-wall {
+	background-position: -240px -268px; 
+	width: 32px;
+	height: 69px;
 }
 
 .tree {

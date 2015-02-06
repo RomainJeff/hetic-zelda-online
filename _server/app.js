@@ -5,8 +5,8 @@ var usersManager = function () {
 usersManager.prototype.add = function(id, color) {
     this.users[id] = {
         id: id,
-        x: 10,
-        y: 10,
+        x: 40,
+        y: 60,
         color: color
     };
 };
