@@ -155,7 +155,7 @@ Personnage.prototype.isHitboxed = function () {
         if (this.direction == "Droite") {
             if (
                 (this.posLeft + 20 >= hitBoxLeft && this.posLeft < hitBoxRight) &&
-                (this.posTop >= hitBoxTop && this.posTop <= hitBoxBottom)
+                (this.posTop + this.size / 2 >= hitBoxTop && this.posTop <= hitBoxBottom)
             ) {
                 return true;
             }
@@ -165,7 +165,7 @@ Personnage.prototype.isHitboxed = function () {
         if (this.direction == "Gauche") {
             if (
                 (this.posLeft - this.size - 10 <= hitBoxRight && this.posLeft > hitBoxLeft) &&
-                (this.posTop >= hitBoxTop && this.posTop <= hitBoxBottom)
+                (this.posTop + this.size / 2 >= hitBoxTop && this.posTop <= hitBoxBottom)
             ) {
                 return true;
             }

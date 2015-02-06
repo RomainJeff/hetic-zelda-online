@@ -12,22 +12,21 @@ body {
 }
 
 [data-zelda=true] {
-background-image:url(images/zelda.png);
-width:32px;
-height:32px;
-display:block;
-background-repeat: no-repeat;
-position:absolute;
-z-index: 3;
-
+	background-image:url(images/zelda.png);
+	width:32px;
+	height:32px;
+	display:block;
+	background-repeat: no-repeat;
+	position:absolute;
+	z-index: 3;
 }
 
 #myself {
-	z-index: 9;
+	z-index: 7;
 }
 
-#myself[data-pos="Bas"] {
-	z-index: 3;
+[class^=dirHaut] {
+	z-index: 8 !important;
 }
 
 #choice-color {
@@ -148,6 +147,13 @@ z-index: 3;
 	position:absolute;
 	top:60px;
 	left:30px;
+}
+
+.house-yellow {
+	background: url('images/minish-houses.gif') no-repeat -220px -108px;
+	width: 80px;
+	height: 88px;
+	position: absolute;
 }
 
 .dirBas1{
