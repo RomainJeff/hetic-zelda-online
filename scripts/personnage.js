@@ -45,6 +45,8 @@ Personnage.prototype.down = function () {
         this.zelda.style.top = this.posTop +"px";
 
         this.move();
+    } else {
+        this.setPosition(this.direction, 5);
     }
 };
 
@@ -59,6 +61,8 @@ Personnage.prototype.up = function () {
         this.zelda.style.top = this.posTop +"px";
 
         this.move();
+    } else {
+        this.setPosition(this.direction, 5);
     }
 };
 
@@ -73,6 +77,8 @@ Personnage.prototype.left = function () {
         this.zelda.style.left = this.posLeft +"px";
 
         this.move();
+    } else {
+        this.setPosition(this.direction, 5);
     }
 };
 
@@ -87,6 +93,8 @@ Personnage.prototype.right = function () {
         this.zelda.style.left = this.posLeft +"px";
 
         this.move();
+    } else {
+        this.setPosition(this.direction, 5);
     }
 };
 
