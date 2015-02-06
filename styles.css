@@ -149,11 +149,23 @@ body {
 	left:30px;
 }
 
-.house-yellow {
-	background: url('images/minish-houses.gif') no-repeat -220px -108px;
-	width: 80px;
-	height: 88px;
+[class^=house] {
+	background: url('images/minish-houses.gif') no-repeat;
 	position: absolute;
+	height: 88px;
+	width: 88px;
+}
+
+.house-yellow {
+	background-position: -220px -108px;
+}
+
+.house-blue {
+	background-position: -126px -97px;
+}
+
+.house-purple {
+	background-position: -124px -196px;
 }
 
 .dirBas1{
