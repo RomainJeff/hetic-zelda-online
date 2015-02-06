@@ -59,6 +59,7 @@ $('#choice-color form').on('submit', function (event) {
     var color = $(this).children('select').val();
 
     socket.emit('setColor', color);
-    $(this).parent().fadeOut();
     $('#myself').attr('data-color', color);
+
+    $(this).parent().fadeOut();
 });

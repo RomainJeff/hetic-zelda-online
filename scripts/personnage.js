@@ -40,7 +40,7 @@ Personnage.prototype.getLeft = function () {
 Personnage.prototype.down = function () {
     this.direction = "Bas";
 
-    if (this.posTop < this.browserHeight - 42 && !this.isHitboxed()) {
+    if (this.posTop < this.browserHeight - 52 && !this.isHitboxed()) {
         this.posTop += this.size / 2;
         this.zelda.style.top = this.posTop +"px";
 
@@ -138,6 +138,12 @@ Personnage.prototype.isHitboxed = function () {
 
     for (var i = 0; i < hitbox.length; i++) {
         var hitboxElement = hitbox[i];
+
+        if (hitboxElement.id == this.zelda.id) {
+            console.log(hitboxElement.id +"--"+ this.zelda.id);
+            continue;
+        }
+
         var hitBoxLeft = parseInt(hitboxElement.style.left) - 20;
         var hitBoxRight = hitBoxLeft + parseInt(hitboxElement.style.width) - 20;
         
@@ -177,9 +183,6 @@ Personnage.prototype.isHitboxed = function () {
 
         // HitBox BottomSide Direction Bottom
         if (this.direction == "Bas") {
-            console.log(hitBoxTop);
-            console.log(this.posTop);
-
             if (
                 (this.posLeft - this.size < hitBoxRight && this.posLeft > hitBoxLeft) &&
                 (this.posTop + this.size >= hitBoxTop && this.posTop < hitBoxBottom)

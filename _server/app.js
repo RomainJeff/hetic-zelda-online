@@ -2,12 +2,12 @@ var usersManager = function () {
     this.users = [];
 };
 
-usersManager.prototype.add = function(id) {
+usersManager.prototype.add = function(id, color) {
     this.users[id] = {
         id: id,
         x: 10,
         y: 10,
-        color: 'green'
+        color: color
     };
 };
 
@@ -23,12 +23,9 @@ usersManager.prototype.set = function(id, x, y) {
     this.users[id] = {
         x: x,
         y: y,
-        id: id
+        id: id,
+        color: this.users[id].color
     };
-};
-
-usersManager.prototype.setColor = function (id, color) {
-    this.users[id].color = color;
 };
 
 usersManager.prototype.delete = function(id) {
@@ -82,10 +79,7 @@ io.on('connection', function (socket) {
     // Definie la couleur
     socket.on('setColor', function (color) {
         // On ajoute l'utilisateur
-        users.add(socket.id);
-
-        // On definie sa couleur
-        users.setColor(socket.id, color);
+        users.add(socket.id, color);
 
         // On notifie les autres joueurs du
         // nouvel utilisateur
