@@ -216,42 +216,42 @@ z-index: 3;
 
 /** BLUE **/
 [data-color="blue"].dirHaut4{
-	background-position: -96px -123px;
+	background-position: -100px -225px;
 }
 [data-color="blue"].dirHaut5{
-	background-position: -96px -123px;
+	background-position: -129px -225px;
 }
 [data-color="blue"].dirHaut6{
-	background-position: -96px -123px;
+	background-position: -164px -225px;
 }
 
 [data-color="blue"].dirDroite4{
-	background-position: -352px -64px;
+	background-position: -96px -193px;
 }
 [data-color="blue"].dirDroite5{
-	background-position: -320px -64px;
+	background-position: -127px -193px;
 }
 [data-color="blue"].dirDroite6{
-	background-position: -288px -64px;
+	background-position: -160px -193px;
 }
 
 
 [data-color="blue"].dirGauche4{
-	background-position: -352px -33px;
+	background-position: -99px -161px;
 }
 [data-color="blue"].dirGauche5{
-	background-position: -320px -33px;
+	background-position: -129px -161px;
 }
 [data-color="blue"].dirGauche6{
-	background-position: -288px -33px;
+	background-position: -163px -161px;
 }
 
 [data-color="blue"].dirBas4{
-	background-position: -352px 0px;
+	background-position: -99px -129px;
 }
 [data-color="blue"].dirBas5{
-	background-position: -320px 0px;
+	background-position: -129px -129px;
 }
 [data-color="blue"].dirBas6{
-	background-position: -288px 0px;
+	background-position: -163px -129px;
 }
