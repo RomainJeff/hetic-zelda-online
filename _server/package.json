@@ -1,0 +1,15 @@
+{
+  "name": "zelda-hetic",
+  "version": "1.0.0",
+  "description": "Serveur multijoueur de zelda",
+  "main": "app.js",
+  "author": "Romain QUILLIOT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RomainJeff/hetic-zelda-online/issues"
+  },
+  "homepage": "https://github.com/RomainJeff/hetic-zelda-online",
+  "dependencies": {
+    "socket.io" : ">=1.3.0"
+  }
+}
