@@ -11,8 +11,8 @@ var Personnage = function (element, lava) {
     this.zelda = element;
     this.lava = lava;
 
-    this.browserHeight = document.documentElement.clientHeight;
-    this.browserWidth = document.documentElement.clientWidth;
+    this.browserHeight = parseInt(document.getElementById('playground').style.height);
+    this.browserWidth = parseInt(document.getElementById('playground').style.width);
 
     this.direction = "Bas";
 };

@@ -1,7 +1,14 @@
-body{
+body {
+	background: #000;
+}
+
+#playground {
 	background: url('http://i47.tinypic.com/1zmh0qq.png');
 	background-size: 60px;
 	overflow: hidden;
+	position: fixed;
+	left: calc(50% - 512px);
+	top: calc(50% - 300px);
 }
 
 [data-zelda=true] {

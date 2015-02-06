@@ -5,39 +5,42 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body style="height: 100%; width: 100%;">
+<body>
 	
+	<section id="playground" style="height: 600px; width: 1024px;">
 
-	<!-- CHOICE -->
-	<section id="choice-color">
-		<form method="post">
-			<h2>Choisir une couleur</h2>
-			<select>
-				<option value="blue">Bleu</option>
-				<option value="green">Vert</option>
-			</select><br>
-			<button>Commencer à jouer</button>
-		</form>
+		<!-- CHOICE -->
+		<section id="choice-color">
+			<form method="post">
+				<h2>Choisir une couleur</h2>
+				<select>
+					<option value="blue">Bleu</option>
+					<option value="green">Vert</option>
+				</select><br>
+				<button>Commencer à jouer</button>
+			</form>
+		</section>
+		
+		<!-- ARROWS -->
+		<div id="arrows"></div>
+		
+		<!-- CHARACTERS -->
+		<div id="characters">
+			<div id="myself" class="dirBas5" style="left:10px;top:10px;width:32px;height:32px;" 
+				data-zelda="true"
+				data-color="blue"
+				data-pos="0"
+				data-lava="false"
+				data-foot="5"></div>
+		</div>
+
+		<!-- HITBOX -->
+		<div class="hitbox" data-hitbox="true" style="width: 120px;height: 120px; top: 50px; left: 100px; background: black; position: absolute;"></div>
+		
+		<!-- LAVE -->
+		<div id="lave" style="width: 200px;height: 200px; top: 100px; left: 400px;"></div>
+
 	</section>
-	
-	<!-- ARROWS -->
-	<div id="arrows"></div>
-	
-	<!-- CHARACTERS -->
-	<div id="characters">
-		<div id="myself" class="dirBas5" style="left:10px;top:10px;width:32px;height:32px;" 
-			data-zelda="true"
-			data-color="blue"
-			data-pos="0"
-			data-lava="false"
-			data-foot="5"></div>
-	</div>
-
-	<!-- HITBOX -->
-	<div class="hitbox" data-hitbox="true" style="width: 120px;height: 120px; top: 50px; left: 100px; background: black; position: absolute;"></div>
-	
-	<!-- LAVE -->
-	<div id="lave" style="width: 200px;height: 200px; top: 100px; left: 400px;"></div>
 	
 
 	<!-- SCRIPTS -->
