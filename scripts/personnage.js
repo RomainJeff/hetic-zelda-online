@@ -134,7 +134,7 @@ Personnage.prototype.move = function () {
  *
  */
 Personnage.prototype.isHitboxed = function () {
-    var hitbox = $('.hitbox');
+    var hitbox = $('[data-hitbox=true]');
 
     for (var i = 0; i < hitbox.length; i++) {
         var hitboxElement = hitbox[i];

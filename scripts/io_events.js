@@ -7,7 +7,7 @@ var socket = io('localhost:8080');
 socket.on('newUser', function (infos) {
     console.log(infos);
 
-    $('#characters').append('<div id="'+ infos.id +'" data-zelda="true" data-color="'+ infos.color +'" class="dirBas5" data-pos="0" data-lava="false" data-foot="5" style="left:'+ infos.x +'px;top:'+ infos.y +'px;"></div>');
+    $('#characters').append('<div id="'+ infos.id +'" data-hitbox="true" data-zelda="true" data-color="'+ infos.color +'" class="dirBas5" data-pos="0" data-lava="false" data-foot="5" style="width:32px;height:32px;left:'+ infos.x +'px;top:'+ infos.y +'px;"></div>');
     var zelda = document.getElementById(infos.id);
 
     users.add(infos.id, new Personnage(zelda, lava)); 

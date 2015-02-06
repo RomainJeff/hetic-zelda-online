@@ -15,6 +15,10 @@ z-index: 3;
 
 }
 
+#myself {
+	z-index: 9;
+}
+
 #choice-color {
 	z-index: 10;
 	color: white;
