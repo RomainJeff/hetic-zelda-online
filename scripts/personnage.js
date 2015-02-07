@@ -35,6 +35,24 @@ Personnage.prototype.getLeft = function () {
 
 
 /**
+ * Methode pour definir la position Top
+ */
+Personnage.prototype.setTop = function (top) {
+    this.posTop = top;
+    this.zelda.style.top = top +"px";
+}
+
+
+/**
+ * Methode pour definir la position Left
+ */
+Personnage.prototype.setLeft = function (left) {
+    this.posLeft = left;
+    this.zelda.style.left = left +"px";
+}
+
+
+/**
  * Methode pour descendre
  */
 Personnage.prototype.down = function () {

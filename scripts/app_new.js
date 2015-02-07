@@ -8,8 +8,10 @@ var mapEvents = new mapEventsManager();
 users.add("myself", new Personnage(zelda, lava));
 
 // On ajoute un point event
+// Teleportation
 mapEvents.add("test", function (zeldaElement) {
-    console.log('Event is fired brah!');
+    zeldaElement.setLeft(800);
+    zeldaElement.setTop(200);
 });
 
 
