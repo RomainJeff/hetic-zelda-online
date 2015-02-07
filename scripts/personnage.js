@@ -25,14 +25,12 @@ Personnage.prototype.getTop = function () {
     return this.posTop;
 };
 
-
 /** 
  * Methode pour recuperer la position Left
  */
 Personnage.prototype.getLeft = function () {
     return this.posLeft;
 };
-
 
 /**
  * Methode pour definir la position Top
@@ -42,7 +40,6 @@ Personnage.prototype.setTop = function (top) {
     this.zelda.style.top = top +"px";
 }
 
-
 /**
  * Methode pour definir la position Left
  */
@@ -50,7 +47,6 @@ Personnage.prototype.setLeft = function (left) {
     this.posLeft = left;
     this.zelda.style.left = left +"px";
 }
-
 
 /**
  * Methode pour descendre
@@ -125,11 +121,7 @@ Personnage.prototype.setPosition = function (direction, number) {
     var className = "dir"+ direction + number;
     this.zelda.className = className;
     this.zelda.dataset.foot = number;
-
-    // Verification de la lave
-    // this.isLave();
 };
-
 
 /**
  * Methode pour definir la position des pieds
@@ -218,28 +210,6 @@ Personnage.prototype.isHitboxed = function () {
     }
 
     return false;
-};
-
-/**
- * Methode pour savoir si il est dans la lave
- */
-Personnage.prototype.isLave = function () {
-    var lavaLeft = parseInt(this.lava.style.left) - (this.size / 2);
-    var lavaRight = lavaLeft +  parseInt(this.lava.style.width);
-    
-    var lavaTop = parseInt(this.lava.style.top) - (this.size / 2) - 10;
-    var lavaBottom = lavaTop + parseInt(this.lava.style.height);
-
-    if (
-        (this.posLeft >= lavaLeft && this.posLeft <= lavaRight) &&
-        (this.posTop >= lavaTop && this.posTop <= lavaBottom)
-    ) {
-        this.zelda.dataset.lava = true;
-    } else {
-        if (this.zelda.dataset.lava) {
-            this.zelda.dataset.lava = false;
-        }
-    }
 };
 
 /**
