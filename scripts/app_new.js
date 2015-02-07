@@ -1,10 +1,16 @@
 var lava = document.getElementById("lave");
 var zelda = document.getElementById("myself");
 var users = new usersManager();
+var mapEvents = new mapEventsManager();
 
 
 // Ajout de l'utilisateur courant a la liste
 users.add("myself", new Personnage(zelda, lava));
+
+// On ajoute un point event
+mapEvents.add("test", function (zeldaElement) {
+    console.log('Event is fired brah!');
+});
 
 
 /**
@@ -41,6 +47,10 @@ document.addEventListener('keydown', function (e) {
         default:
             break;
     }
+
+
+    // On verifie les evenements de la map
+    mapEvents.verifyEvents(users.get("myself"));
 
 
     /** Envoie la nouvelle position **/

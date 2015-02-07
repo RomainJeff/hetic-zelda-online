@@ -109,7 +109,7 @@ Personnage.prototype.setPosition = function (direction, number) {
     this.zelda.dataset.foot = number;
 
     // Verification de la lave
-    this.isLave();
+    // this.isLave();
 };
 
 
@@ -148,7 +148,6 @@ Personnage.prototype.isHitboxed = function () {
         var hitboxElement = hitbox[i];
 
         if (hitboxElement.id == this.zelda.id) {
-            console.log(hitboxElement.id +"--"+ this.zelda.id);
             continue;
         }
 
