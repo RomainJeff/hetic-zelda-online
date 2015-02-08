@@ -70,7 +70,9 @@ io.on('connection', function (socket) {
         // On met a jour le perso sur les autres joueurs
         socket.broadcast.emit('interact', {
             id: socket.id,
-            event: event.name
+            event: event.name,
+            x: event.x,
+            y: event.y
         });
 
     });

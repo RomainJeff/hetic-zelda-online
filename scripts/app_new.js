@@ -7,11 +7,38 @@ var mapEvents = new mapEventsManager();
 // Ajout de l'utilisateur courant a la liste
 users.add("myself", new Personnage(zelda, lava));
 
-// On ajoute un point event
-// Teleportation
-mapEvents.add("test", function (zeldaElement) {
-    zeldaElement.setLeft(800);
-    zeldaElement.setTop(200);
+
+/**
+ * EVENEMENTS MAP
+ */
+mapEvents.add("teleport", function (zeldaElement) {
+    var x = 790;
+    var y = 157 - zeldaElement.size / 2;
+
+    zeldaElement.setLeft(x);
+    zeldaElement.setTop(y);
+
+    // On envoie la teleportation au serveur
+    socket.emit('setPosition', {
+        name: "Teleport",
+        x: x,
+        y: y
+    });
+});
+
+mapEvents.add("teleportBack", function (zeldaElement) {
+    var x = 319;
+    var y = 910 - zeldaElement.size / 2;
+
+    zeldaElement.setLeft(x);
+    zeldaElement.setTop(y);
+
+    // On envoie la teleportation au serveur
+    socket.emit('setPosition', {
+        name: "Teleport",
+        x: x,
+        y: y
+    });
 });
 
 
