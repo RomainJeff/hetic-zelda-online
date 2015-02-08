@@ -7,18 +7,23 @@
 </head>
 <body>
 	
-	<section id="playground" style="height: 960px; width: 960px;">
+	<section id="playground" style="height: 610px; width: 960px;">
 
 		<!-- CHOICE -->
 		<section id="choice-color">
 			<form method="post">
 				<h2>Choisir une couleur</h2>
-				<select>
+				<select id="color">
 					<option value="blue">Bleu</option>
 					<option value="green">Vert</option>
 				</select><br>
 				<button>Commencer à jouer</button>
 			</form>
+		</section>
+
+		<!-- SPEECH BUBBLES -->
+		<section data-next="true" data-speech="1" id="speech-bubble">
+			Welcome Link to your <span>new aventure</span> !
 		</section>
 		
 		<!-- ARROWS -->
@@ -83,6 +88,7 @@
 
 	<script type="text/javascript" src="scripts/usersManager.js"></script>
 	<script type="text/javascript" src="scripts/mapEventsManager.js"></script>
+	<script type="text/javascript" src="scripts/speechManager.js"></script>
 	<script type="text/javascript" src="scripts/personnage.js"></script>
 	<script type="text/javascript" src="scripts/app_new.js"></script>
 	<script type="text/javascript" src="scripts/io_events.js"></script>

@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=VT323);
+
 body {
 	background: #000;
 	overflow: auto;
@@ -20,6 +22,50 @@ body {
 	background-repeat: no-repeat;
 	position:absolute;
 	z-index: 3;
+}
+
+#speech-bubble {
+	position: absolute;
+	bottom: 10px;
+	left: calc(50% - 150px);
+	width: 300px;
+	box-sizing: border-box;
+	background: black;
+	color: white;
+	font-family: "VT323";
+	font-size: 15px;
+	border: solid 3px white;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#speech-bubble span {
+	color: #d00002;
+}
+
+#speech-bubble:after {
+	content: "";
+	position: absolute;
+	right: 10px;
+	bottom: 12px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 5px 0 5px;
+	border-color: #FFF transparent transparent transparent;
+	-webkit-animation: speechArrow 2s infinite linear;
+}
+
+@-webkit-keyframes speechArrow {
+	0% {
+		transform: translateY(5px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(5px);
+	}
 }
 
 #myself {

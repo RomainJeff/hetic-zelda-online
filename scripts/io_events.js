@@ -36,7 +36,7 @@ socket.on('interact', function (infos) {
         case "Fire":
             users.get(player).fireArrow();
         case "Teleport":
-            users.get(player).setTop(infos.y - users.get(player).size / 2);
+            users.get(player).setTop(infos.y);
             users.get(player).setLeft(infos.x);
         default:
             break;

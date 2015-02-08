@@ -1,11 +1,22 @@
 var lava = document.getElementById("lave");
 var zelda = document.getElementById("myself");
+var speechElement = document.getElementById("speech-bubble");
+
 var users = new usersManager();
 var mapEvents = new mapEventsManager();
+var speech = new speechManager(speechElement);
 
 
 // Ajout de l'utilisateur courant a la liste
 users.add("myself", new Personnage(zelda, lava));
+
+
+// Ajout des speech
+speech.add('Welcome to your new world !');
+speech.add('Move Link with <span>Arrows</span>');
+speech.add('Use elbow with <span>Enter</span>');
+speech.add('Have fun !')
+speech.play();
 
 
 /**
@@ -13,7 +24,7 @@ users.add("myself", new Personnage(zelda, lava));
  */
 mapEvents.add("teleport", function (zeldaElement) {
     var x = 790;
-    var y = 157 - zeldaElement.size / 2;
+    var y = 141;
 
     zeldaElement.setLeft(x);
     zeldaElement.setTop(y);
@@ -28,7 +39,7 @@ mapEvents.add("teleport", function (zeldaElement) {
 
 mapEvents.add("teleportBack", function (zeldaElement) {
     var x = 319;
-    var y = 910 - zeldaElement.size / 2;
+    var y = 894;
 
     zeldaElement.setLeft(x);
     zeldaElement.setTop(y);
@@ -73,6 +84,11 @@ document.addEventListener('keydown', function (e) {
             users.get("myself").fireArrow();
             break;
 
+        // Speech control
+        case 32:
+            speech.play();
+            break;
+
         default:
             break;
     }
@@ -95,7 +111,7 @@ document.addEventListener('keydown', function (e) {
 
 $('#choice-color form').on('submit', function (event) {
     event.preventDefault();
-    var color = $(this).children('select').val();
+    var color = $('#color').val();
 
     socket.emit('setColor', color);
     $('#myself').attr('data-color', color);
